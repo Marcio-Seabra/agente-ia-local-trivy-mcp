@@ -1,6 +1,6 @@
 # Agente de Inteligência Artificial Local para Interpretação de Vulnerabilidades em Contêineres Docker com Trivy e Protocolo MCP
 
-Repositório de artefatos do Trabalho de Conclusão de Curso (TCC) apresentado à Faculdade de Tecnologia de São Caetano do Sul – Antônio Russo (FATEC São Caetano do Sul), curso de Tecnologia em Segurança da Informação, 2026.
+Repositório de artefatos do Trabalho de Conclusão de Curso (TCC) desenvolvido no âmbito do curso de Tecnologia em Segurança da Informação da Faculdade de Tecnologia de São Caetano do Sul – Antônio Russo (FATEC São Caetano do Sul), 2026.
 
 A monografia do TCC não está incluída neste repositório. O link para a versão final poderá ser adicionado quando ela for oficialmente aprovada e publicada.
 

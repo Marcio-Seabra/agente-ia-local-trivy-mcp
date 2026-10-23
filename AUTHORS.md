@@ -1,6 +1,6 @@
 # Autores
 
-Este repositório reúne os artefatos do Trabalho de Conclusão de Curso "Agente de Inteligência Artificial Local para Interpretação de Vulnerabilidades em Contêineres Docker com Trivy e Protocolo MCP", apresentado à Faculdade de Tecnologia de São Caetano do Sul – Antônio Russo, curso de Tecnologia em Segurança da Informação, 2026.
+Este repositório reúne os artefatos do Trabalho de Conclusão de Curso "Agente de Inteligência Artificial Local para Interpretação de Vulnerabilidades em Contêineres Docker com Trivy e Protocolo MCP", desenvolvido no âmbito do curso de Tecnologia em Segurança da Informação da Faculdade de Tecnologia de São Caetano do Sul – Antônio Russo, 2026.
 
 ## Autores
 

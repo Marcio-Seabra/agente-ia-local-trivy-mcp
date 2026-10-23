@@ -1,51 +1,41 @@
 cff-version: 1.2.0
 message: >-
-  Se você usar estes artefatos, cite a monografia indicada em
-  preferred-citation. Orientador: Prof. Dr. Fábio Henrique Cabrini.
+  Se você usar estes artefatos, cite este repositório como projeto
+  acadêmico. Projeto de Trabalho de Conclusão de Curso do curso de
+  Tecnologia em Segurança da Informação da Faculdade de Tecnologia de São
+  Caetano do Sul – Antônio Russo, sob orientação do Prof. Dr. Fábio
+  Henrique Cabrini. A monografia ainda não foi oficialmente aprovada e
+  publicada; após a publicação, a referência bibliográfica definitiva
+  poderá ser adicionada.
 title: >-
   Agente de Inteligência Artificial Local para Interpretação de
   Vulnerabilidades em Contêineres Docker com Trivy e Protocolo MCP
 abstract: >-
-  Artefatos do Trabalho de Conclusão de Curso: código do protótipo
-  utilizado no Experimento 3, prompts, relatórios do Trivy, saídas dos
-  modelos e relatórios de avaliação.
+  Artefatos de projeto de Trabalho de Conclusão de Curso (Tecnologia em
+  Segurança da Informação, Faculdade de Tecnologia de São Caetano do Sul –
+  Antônio Russo, 2026), desenvolvido sob orientação do Prof. Dr. Fábio
+  Henrique Cabrini: código do protótipo utilizado no Experimento 3,
+  prompts, relatórios do Trivy, saídas dos modelos e relatórios de
+  avaliação.
 authors:
   - given-names: Danilo da Silva
     family-names: Souza
+    affiliation: Faculdade de Tecnologia de São Caetano do Sul – Antônio Russo
   - given-names: Gabriel Fernandes
     family-names: Jordão
+    affiliation: Faculdade de Tecnologia de São Caetano do Sul – Antônio Russo
   - given-names: Marcio Seabra
     family-names: Bastos Neto
+    affiliation: Faculdade de Tecnologia de São Caetano do Sul – Antônio Russo
   - given-names: Thiago Alves
     name-particle: de
     family-names: Oliveira
+    affiliation: Faculdade de Tecnologia de São Caetano do Sul – Antônio Russo
+date-released: '2026-10-23'
+repository-code: 'https://github.com/Marcio-Seabra/agente-ia-local-trivy-mcp'
 keywords:
   - segurança de contêineres
   - Trivy
   - Model Context Protocol
   - modelos de linguagem de pequeno porte
   - análise de vulnerabilidades
-preferred-citation:
-  type: thesis
-  title: >-
-    Agente de Inteligência Artificial Local para Interpretação de
-    Vulnerabilidades em Contêineres Docker com Trivy e Protocolo MCP
-  authors:
-    - given-names: Danilo da Silva
-      family-names: Souza
-    - given-names: Gabriel Fernandes
-      family-names: Jordão
-    - given-names: Marcio Seabra
-      family-names: Bastos Neto
-    - given-names: Thiago Alves
-      name-particle: de
-      family-names: Oliveira
-  year: 2026
-  thesis-type: Trabalho de Conclusão de Curso (Tecnologia em Segurança da Informação)
-  institution:
-    name: Faculdade de Tecnologia de São Caetano do Sul – Antônio Russo
-    city: São Caetano do Sul
-    country: BR
-  languages:
-    - por
-  notes: "Orientador: Prof. Dr. Fábio Henrique Cabrini."
