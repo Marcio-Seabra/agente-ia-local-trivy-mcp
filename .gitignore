@@ -1,0 +1,32 @@
+# Sistema operacional e editores
+.DS_Store
+Thumbs.db
+desktop.ini
+~$*
+*.tmp
+*.swp
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+
+# Segredos e configurações locais
+.env
+.env.*
+*.key
+*.pem
+
+# Trivy: binários e cache do banco de vulnerabilidades (baixar da fonte oficial)
+**/server/trivy/trivy.exe
+**/server/trivy/trivy
+**/trivy-cache/
+
+# Saídas geradas pela execução local do protótipo
+*.log.tmp

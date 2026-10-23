@@ -1,0 +1,279 @@
+Você realizará uma avaliação comparativa de quatro arquivos localizados em:
+
+D:\Documentos(D)\Estudos\FATEC\TCC\docx\analise
+
+Arquivos:
+
+1. analise-controle.md
+2. TESTE - Granite4.2.pdf
+3. TESTE - DeepSeek - R1.pdf
+4. TESTE - Qwen3.5.pdf
+
+O arquivo `analise-controle.md` corresponde à análise de controle.
+
+Os outros três arquivos correspondem às respostas que serão avaliadas.
+
+As três respostas foram produzidas para a mesma solicitação:
+
+"Forneça uma análise de segurança contendo:
+
+1. Resumo da análise
+2. Vulnerabilidades encontradas
+3. Níveis de severidade
+4. Principais riscos
+5. Recomendações de correção
+
+Responda em português."
+
+A base documental da avaliação é formada exclusivamente pelos quatro arquivos indicados.
+
+Sua tarefa é avaliar comparativamente a qualidade das três respostas tomando `analise-controle.md` como referência.
+
+============================================================
+METODOLOGIA
+============================================================
+
+Leia integralmente os quatro arquivos.
+
+A avaliação deverá seguir os mesmos critérios, a mesma escala e o mesmo peso para as três respostas.
+
+A estrutura de avaliação será derivada diretamente dos cinco elementos solicitados no prompt original:
+
+1. Resumo da análise
+2. Vulnerabilidades encontradas
+3. Níveis de severidade
+4. Principais riscos
+5. Recomendações de correção
+
+Cada dimensão receberá uma nota de 0 a 10.
+
+Para determinar a nota de cada dimensão, considere conjuntamente:
+
+- correção em relação à análise de controle;
+- cobertura das informações relevantes para aquela dimensão;
+- coerência técnica;
+- qualidade da explicação apresentada.
+
+Os quatro aspectos acima servem apenas para orientar a análise de cada dimensão. A nota continua sendo única, de 0 a 10.
+
+Os cinco critérios possuem o mesmo peso.
+
+A nota final será:
+
+(Resumo + Vulnerabilidades + Severidade + Riscos + Recomendações) / 5
+
+============================================================
+ESCALA
+============================================================
+
+Utilize a seguinte escala comum às três respostas:
+
+10 — desempenho excelente no critério
+9 — desempenho muito bom
+8 — desempenho bom
+7 — desempenho satisfatório
+6 — desempenho razoável
+5 — atendimento parcial
+4 — desempenho abaixo do esperado
+3 — desempenho fraco
+2 — desempenho muito fraco
+1 — atendimento mínimo
+0 — critério não atendido
+
+As notas devem ser fundamentadas no conteúdo dos arquivos.
+
+============================================================
+1. RESUMO DA ANÁLISE
+============================================================
+
+Compare o resumo apresentado em cada resposta com a análise de controle.
+
+Avalie:
+
+- representação geral dos resultados;
+- informações selecionadas para sintetizar o cenário;
+- correspondência com a referência;
+- qualidade da síntese.
+
+Atribua uma nota de 0 a 10 e apresente a justificativa.
+
+============================================================
+2. VULNERABILIDADES ENCONTRADAS
+============================================================
+
+Compare as vulnerabilidades apresentadas em cada resposta com a análise de controle.
+
+Avalie:
+
+- identificação das vulnerabilidades;
+- informações associadas a elas;
+- correspondência com a referência;
+- cobertura;
+- precisão das informações apresentadas.
+
+Atribua uma nota de 0 a 10 e apresente a justificativa.
+
+============================================================
+3. NÍVEIS DE SEVERIDADE
+============================================================
+
+Compare a apresentação e interpretação das severidades com a análise de controle.
+
+Avalie:
+
+- classificações apresentadas;
+- associação entre vulnerabilidade e severidade;
+- correspondência com a referência;
+- qualidade da interpretação.
+
+Atribua uma nota de 0 a 10 e apresente a justificativa.
+
+============================================================
+4. PRINCIPAIS RISCOS
+============================================================
+
+Compare os riscos identificados nas respostas com os riscos apresentados ou sustentados pela análise de controle.
+
+Avalie:
+
+- relação entre os achados e os riscos descritos;
+- coerência da interpretação;
+- cobertura dos riscos relevantes;
+- qualidade da explicação.
+
+Atribua uma nota de 0 a 10 e apresente a justificativa.
+
+============================================================
+5. RECOMENDAÇÕES DE CORREÇÃO
+============================================================
+
+Compare as recomendações apresentadas com a análise de controle.
+
+Avalie:
+
+- relação das recomendações com os achados;
+- correção das ações sugeridas;
+- cobertura das medidas relevantes;
+- qualidade e utilidade das recomendações.
+
+Atribua uma nota de 0 a 10 e apresente a justificativa.
+
+============================================================
+AVALIAÇÃO INDIVIDUAL
+============================================================
+
+Avalie primeiro cada resposta separadamente.
+
+Para cada modelo, utilize:
+
+# [Nome do modelo]
+
+| Critério | Nota | Justificativa |
+|---|---:|---|
+| Resumo da análise | X/10 | |
+| Vulnerabilidades encontradas | X/10 | |
+| Níveis de severidade | X/10 | |
+| Principais riscos | X/10 | |
+| Recomendações de correção | X/10 | |
+| MÉDIA FINAL | X/10 | |
+
+Depois da tabela, apresente:
+
+### Principais acertos
+
+Identifique os aspectos da resposta que apresentaram maior correspondência ou qualidade em relação ao controle.
+
+### Principais limitações
+
+Identifique os aspectos em que a resposta apresentou menor correspondência ou qualidade.
+
+### Divergências em relação ao controle
+
+Liste objetivamente as diferenças encontradas entre a resposta e `analise-controle.md`.
+
+### Síntese da avaliação
+
+Faça uma síntese curta do desempenho observado.
+
+Repita exatamente essa estrutura para:
+
+- Granite 4.2
+- DeepSeek R1
+- Qwen 3.5
+
+============================================================
+COMPARAÇÃO CONSOLIDADA
+============================================================
+
+Após concluir as três avaliações individuais, monte:
+
+| Critério | Granite 4.2 | DeepSeek R1 | Qwen 3.5 |
+|---|---:|---:|---:|
+| Resumo da análise | | | |
+| Vulnerabilidades encontradas | | | |
+| Níveis de severidade | | | |
+| Principais riscos | | | |
+| Recomendações de correção | | | |
+| MÉDIA FINAL | | | |
+
+============================================================
+COMPARAÇÃO POR CRITÉRIO
+============================================================
+
+Faça uma comparação textual separada para:
+
+### Resumo da análise
+
+Compare as três respostas e explique as diferenças observadas.
+
+### Vulnerabilidades encontradas
+
+Compare as três respostas e explique as diferenças observadas.
+
+### Níveis de severidade
+
+Compare as três respostas e explique as diferenças observadas.
+
+### Principais riscos
+
+Compare as três respostas e explique as diferenças observadas.
+
+### Recomendações de correção
+
+Compare as três respostas e explique as diferenças observadas.
+
+============================================================
+RESULTADO GERAL
+============================================================
+
+Apresente a ordenação final obtida pelas médias:
+
+1º —
+2º —
+3º —
+
+Informe a média de cada resposta.
+
+Em seguida, explique por que as notas produziram essa ordem, relacionando a conclusão aos cinco critérios avaliados.
+
+Finalize com uma síntese comparativa do desempenho das três respostas.
+
+============================================================
+RASTREABILIDADE
+============================================================
+
+Ao final, registre:
+
+- os quatro arquivos utilizados;
+- os cinco critérios utilizados;
+- a escala de 0 a 10;
+- o peso igual entre os critérios;
+- a fórmula da média final.
+
+Salve uma cópia integral deste prompt em:
+
+D:\Documentos(D)\Estudos\FATEC\TCC\docx\analise\PROMPT_COMPARACAO.txt
+
+Salve a avaliação completa em formato PDF em:
+
+D:\Documentos(D)\Estudos\FATEC\TCC\docx\analise\RESULTADO_COMPARACAO.pdf

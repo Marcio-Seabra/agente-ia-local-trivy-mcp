@@ -1,0 +1,8 @@
+# Preservar os bytes exatos de todos os arquivos (artefatos históricos):
+# nenhuma conversão automática de fim de linha.
+* -text
+
+*.pdf binary
+*.docx binary
+*.png binary
+*.zip binary

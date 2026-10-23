@@ -1,0 +1,455 @@
+Você realizará o TESTE 04 do TCC.
+
+Diretório de trabalho:
+
+D:\Documentos(D)\Estudos\FATEC\TCC\docx\analise-4
+
+O objetivo desta etapa é comparar o nível de qualidade das análises produzidas por três modelos locais com uma análise produzida por um modelo de nuvem de alto nível.
+
+============================================================
+ARQUIVOS
+============================================================
+
+Utilize:
+
+TESTE03 - Granite4.2.pdf
+TESTE03 - Deepseek-r1.pdf
+TESTE03 - Qwen3.5.pdf
+
+TESTE04 - GPT-6-astra-alto.pdf
+
+TRIVY_FIWARE_ORION_HIGH_CRITICAL_TESTE04.json
+
+Não utilize fontes externas.
+
+Não pesquise vulnerabilidades na internet.
+
+Não consulte NVD, CVE.org, Debian Security Tracker, GitHub ou documentação externa.
+
+============================================================
+OBJETIVO DO TESTE 04
+============================================================
+
+Comparar o nível das análises produzidas por:
+
+- Granite 4.2 — modelo local;
+- DeepSeek R1 — modelo local;
+- Qwen 3.5 — modelo local;
+- GPT-6 Astra Alto — modelo de nuvem.
+
+A comparação deve responder principalmente:
+
+> Qual é a diferença observável de qualidade entre os modelos locais avaliados e o modelo de nuvem de alto nível?
+
+E:
+
+> Em quais aspectos a diferença entre os modelos é maior ou menor?
+
+============================================================
+IMPORTANTE — DIFERENÇA ENTRE AS CONDIÇÕES
+============================================================
+
+Não trate este teste como se os quatro modelos tivessem sido executados exatamente sob a mesma condição experimental.
+
+Os relatórios locais são provenientes do Teste 03.
+
+Nesse teste:
+
+- os dados foram divididos em partes;
+- cada parte foi analisada separadamente;
+- posteriormente as respostas foram reunidas.
+
+O GPT-6 Astra Alto foi executado no Teste 04 utilizando diretamente:
+
+TRIVY_FIWARE_ORION_HIGH_CRITICAL_TESTE04.json
+
+Esse arquivo contém somente vulnerabilidades classificadas como HIGH ou CRITICAL.
+
+O GPT recebeu o conjunto em uma única análise.
+
+Portanto:
+
+- não atribua automaticamente diferenças de resultado apenas à capacidade do modelo;
+- não penalize os modelos locais por não possuírem visão global que não estava disponível em cada chamada;
+- não considere o Teste 04 uma comparação controlada de velocidade ou arquitetura;
+- trate a comparação como uma avaliação do NÍVEL DE QUALIDADE DAS RESPOSTAS produzidas nas condições de cada experimento.
+
+Essa limitação deverá aparecer explicitamente na conclusão.
+
+============================================================
+PROMPT BASE DOS MODELOS
+============================================================
+
+A solicitação utilizada como base foi:
+
+"Produza uma análise direta em português contendo:
+
+- Vulnerabilidades relevantes (ID e Pacote).
+- Impacto provável.
+- Recomendações de correção práticas.
+
+Seja conciso e direto ao ponto."
+
+Portanto, utilize exatamente esses três elementos como critérios principais.
+
+============================================================
+ETAPA 1 — ANALISAR O GPT-6 ASTRA ALTO
+============================================================
+
+Leia integralmente:
+
+TRIVY_FIWARE_ORION_HIGH_CRITICAL_TESTE04.json
+
+Depois leia:
+
+TESTE04 - GPT-6-astra-alto.pdf
+
+Compare a resposta do GPT exclusivamente com os dados presentes no JSON.
+
+Não utilize conhecimento externo para validar as afirmações.
+
+Avalie:
+
+1. Vulnerabilidades relevantes;
+2. Impacto provável;
+3. Recomendações de correção práticas.
+
+============================================================
+ETAPA 2 — ANALISAR OS TRÊS MODELOS LOCAIS
+============================================================
+
+Leia integralmente:
+
+TESTE03 - Granite4.2.pdf
+TESTE03 - Deepseek-r1.pdf
+TESTE03 - Qwen3.5.pdf
+
+Avalie os três utilizando os mesmos três critérios:
+
+1. Vulnerabilidades relevantes;
+2. Impacto provável;
+3. Recomendações de correção práticas.
+
+Não altere os critérios entre modelos.
+
+Ao analisar os modelos locais, considere a estrutura em partes existente nos relatórios.
+
+Não penalize um modelo apenas porque seu relatório é maior ou menor.
+
+Não considere quantidade de páginas como indicativo de qualidade.
+
+============================================================
+CRITÉRIO 1 — VULNERABILIDADES RELEVANTES
+============================================================
+
+Avalie:
+
+- identificação dos IDs;
+- associação entre vulnerabilidade e pacote;
+- priorização;
+- precisão;
+- cobertura;
+- omissões relevantes;
+- informações adicionadas sem sustentação;
+- capacidade de destacar os achados mais importantes.
+
+Pergunta:
+
+> O modelo identifica e apresenta adequadamente as vulnerabilidades relevantes?
+
+Nota de 0 a 10.
+
+============================================================
+CRITÉRIO 2 — IMPACTO PROVÁVEL
+============================================================
+
+Avalie:
+
+- relação entre vulnerabilidade e impacto apresentado;
+- coerência técnica;
+- proporcionalidade;
+- distinção entre dado e inferência;
+- cuidado para não transformar possibilidade em certeza;
+- compreensão do contexto da imagem analisada.
+
+Pergunta:
+
+> O modelo interpreta adequadamente o impacto provável das vulnerabilidades?
+
+Nota de 0 a 10.
+
+============================================================
+CRITÉRIO 3 — RECOMENDAÇÕES DE CORREÇÃO
+============================================================
+
+Avalie:
+
+- relação da recomendação com a vulnerabilidade;
+- precisão;
+- aplicabilidade;
+- uso correto de versões quando disponíveis;
+- tratamento adequado de vulnerabilidades sem correção informada;
+- utilidade prática.
+
+Pergunta:
+
+> As recomendações apresentadas são adequadas, práticas e sustentadas pelos dados?
+
+Nota de 0 a 10.
+
+============================================================
+ESCALA
+============================================================
+
+10 — excelente
+9 — muito bom
+8 — bom
+7 — satisfatório
+6 — razoável
+5 — atendimento parcial
+4 — abaixo do esperado
+3 — fraco
+2 — muito fraco
+1 — mínimo
+0 — não atendido
+
+Média:
+
+(Vulnerabilidades + Impacto + Recomendações) / 3
+
+Considere satisfatório:
+
+média >= 7,00
+
+============================================================
+AVALIAÇÃO INDIVIDUAL
+============================================================
+
+Para cada modelo:
+
+# Nome do modelo
+
+| Critério | Nota |
+|---|---:|
+| Vulnerabilidades relevantes | X/10 |
+| Impacto provável | X/10 |
+| Recomendações de correção | X/10 |
+| MÉDIA | X/10 |
+
+Depois apresente:
+
+## Principais acertos
+
+## Principais limitações
+
+## Qualidade da interpretação
+
+## Qualidade das recomendações
+
+## Informações não sustentadas
+
+## Síntese
+
+Não compare o modelo com os demais nesta etapa.
+
+Avalie cada um individualmente primeiro.
+
+============================================================
+COMPARAÇÃO CONSOLIDADA
+============================================================
+
+Após concluir as quatro avaliações individuais, produza:
+
+| Critério | Granite 4.2 | DeepSeek R1 | Qwen 3.5 | GPT-6 Astra Alto |
+|---|---:|---:|---:|---:|
+| Vulnerabilidades relevantes | | | | |
+| Impacto provável | | | | |
+| Recomendações de correção | | | | |
+| MÉDIA | | | | |
+
+============================================================
+COMPARAÇÃO LOCAL × NUVEM
+============================================================
+
+Depois da tabela, compare o GPT-6 Astra Alto separadamente com cada modelo local.
+
+### Granite 4.2 × GPT-6 Astra Alto
+
+Compare:
+
+- precisão;
+- profundidade;
+- interpretação;
+- contextualização;
+- recomendações;
+- informações não sustentadas;
+- clareza.
+
+Classifique a diferença observada como:
+
+- pequena;
+- moderada;
+- grande.
+
+Justifique.
+
+### DeepSeek R1 × GPT-6 Astra Alto
+
+Utilize exatamente a mesma estrutura.
+
+### Qwen 3.5 × GPT-6 Astra Alto
+
+Utilize exatamente a mesma estrutura.
+
+============================================================
+ANÁLISE DO NÍVEL DOS MODELOS
+============================================================
+
+Produza uma seção específica chamada:
+
+# Diferença de nível entre modelos locais e modelo de nuvem
+
+Analise:
+
+1. Onde o GPT-6 Astra Alto demonstrou vantagem clara.
+2. Onde os modelos locais chegaram próximos.
+3. Onde algum modelo local apresentou resultado equivalente ou superior em determinado aspecto.
+4. Quais erros aparecem com maior frequência nos modelos locais.
+5. Quais erros também aparecem no modelo de nuvem.
+6. Se a diferença observada está principalmente em:
+   - precisão;
+   - capacidade de interpretação;
+   - contextualização;
+   - recomendações;
+   - síntese;
+   - controle de inferências.
+
+Não presuma que o modelo de nuvem é superior.
+
+A conclusão deve decorrer exclusivamente dos resultados observados.
+
+============================================================
+COBERTURA × SÍNTESE
+============================================================
+
+Analise também a diferença entre:
+
+- cobrir grande quantidade de vulnerabilidades;
+- selecionar e sintetizar as vulnerabilidades mais relevantes.
+
+Um relatório maior não deve receber nota maior automaticamente.
+
+Um relatório menor não deve receber nota maior automaticamente.
+
+Avalie a qualidade do conteúdo apresentado.
+
+============================================================
+CONCISÃO
+============================================================
+
+O prompt solicitou:
+
+"Seja conciso e direto ao ponto."
+
+Analise qualitativamente se os modelos atenderam a essa solicitação.
+
+Não transforme concisão em um quarto critério numérico.
+
+Considere:
+
+- excesso de repetição;
+- texto desnecessário;
+- omissão causada por síntese excessiva;
+- equilíbrio entre cobertura e objetividade.
+
+============================================================
+RANKING
+============================================================
+
+Apresente:
+
+1º — modelo — média
+2º — modelo — média
+3º — modelo — média
+4º — modelo — média
+
+Porém deixe explícito que:
+
+> o ranking compara a qualidade dos relatórios produzidos, mas os quatro modelos não foram executados sob condições de entrada completamente idênticas.
+
+============================================================
+QUESTÕES FINAIS
+============================================================
+
+Responda objetivamente:
+
+1. O GPT-6 Astra Alto apresentou nível de análise superior aos modelos locais?
+
+2. Qual modelo local ficou mais próximo do nível apresentado pelo GPT-6 Astra Alto?
+
+3. Em qual dos três critérios ocorreu a maior diferença entre local e nuvem?
+
+4. Em qual critério os modelos locais ficaram mais próximos?
+
+5. Os modelos locais demonstraram capacidade útil para interpretação de relatórios de vulnerabilidade?
+
+6. A diferença observada justifica afirmar que modelos locais são inadequados para a tarefa?
+
+Não force resposta positiva ou negativa.
+
+Responda conforme os resultados.
+
+============================================================
+CONCLUSÃO ACADÊMICA
+============================================================
+
+Produza uma conclusão adequada ao TCC.
+
+A conclusão deve separar claramente:
+
+- capacidade demonstrada pelos modelos locais;
+- desempenho do modelo de nuvem;
+- diferença de nível observada;
+- limitações metodológicas da comparação.
+
+Não generalize para:
+
+- todos os modelos locais;
+- todos os modelos de nuvem;
+- outras imagens;
+- outros scanners;
+- outras configurações.
+
+============================================================
+ARQUIVOS DE SAÍDA
+============================================================
+
+Salve em:
+
+D:\Documentos(D)\Estudos\FATEC\TCC\docx\analise-4
+
+os arquivos:
+
+RESULTADO_COMPARACAO_TESTE04.md
+
+RESULTADO_COMPARACAO_TESTE04.pdf
+
+PROMPT_COMPARACAO_TESTE04.txt
+
+O arquivo PROMPT_COMPARACAO_TESTE04.txt deve conter uma cópia integral deste prompt.
+
+============================================================
+REGRA FINAL
+============================================================
+
+Não use fontes externas.
+
+Não assuma previamente que o GPT é melhor.
+
+Não assuma previamente que os modelos locais são piores.
+
+Não utilize tamanho do relatório como medida de qualidade.
+
+Não altere critérios ou pesos entre os modelos.
+
+Construa primeiro as avaliações individuais e somente depois faça a comparação.

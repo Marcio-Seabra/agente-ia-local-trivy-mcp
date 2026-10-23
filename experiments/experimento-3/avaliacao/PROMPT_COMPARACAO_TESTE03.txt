@@ -1,0 +1,570 @@
+Você realizará a TERCEIRA RODADA DE AVALIAÇÃO COMPARATIVA do TCC.
+
+Diretório de trabalho:
+
+D:\Documentos(D)\Estudos\FATEC\TCC\docx\analise-3
+
+Todos os arquivos produzidos nesta avaliação deverão ser salvos nesse diretório.
+
+============================================================
+1. MATERIAIS DISPONÍVEIS
+============================================================
+
+No diretório estão os três relatórios gerados pelos modelos locais:
+
+- TESTE03 - Granite4.2.pdf
+- TESTE03 - Qwen3.5.pdf
+- TESTE03 - Deepseek-r1.pdf
+
+Não existe previamente uma análise de controle do Teste 03.
+
+A imagem utilizada no experimento foi:
+
+fiware/orion
+
+============================================================
+2. REGRA DE FONTES
+============================================================
+
+Para esta avaliação, utilize somente:
+
+1. o relatório obtido diretamente pelo Trivy para a imagem fiware/orion;
+2. os três PDFs do Teste 03.
+
+Não utilize fontes externas para complementar a avaliação.
+
+Não consulte:
+
+- internet;
+- NVD;
+- CVE.org;
+- Debian Security Tracker;
+- GitHub;
+- documentação de fornecedores;
+- páginas de CVEs;
+- outras bases de vulnerabilidades.
+
+Não utilize conhecimento externo para completar informações que não estejam nos materiais permitidos.
+
+A avaliação deve responder exclusivamente:
+
+> Quão bem cada modelo trabalhou com as informações que estavam disponíveis no relatório do Trivy?
+
+============================================================
+3. ETAPA 1 — OBTER O RELATÓRIO DO TRIVY
+============================================================
+
+Execute o Trivy sobre:
+
+fiware/orion
+
+Obtenha a saída completa em JSON.
+
+Salve como:
+
+D:\Documentos(D)\Estudos\FATEC\TCC\docx\analise-3\TRIVY_FIWARE_ORION_TESTE03.json
+
+Preserve o JSON bruto sem alterações.
+
+Registre separadamente:
+
+- comando utilizado;
+- versão do Trivy;
+- data e hora da execução;
+- imagem analisada;
+- quantidade de Results;
+- quantidade total de ocorrências de vulnerabilidade;
+- distribuição das ocorrências por Severity;
+- distribuição das ocorrências por Status.
+
+Não aplique interpretação nesta etapa.
+
+============================================================
+4. ETAPA 2 — REPRODUZIR A PREPARAÇÃO DO TESTE 03
+============================================================
+
+O Teste 03 utilizou uma preparação diferente da rodada anterior.
+
+Para esta avaliação:
+
+1. parta do relatório completo do Trivy;
+2. não aplique filtro prévio por severidade;
+3. remova as ocorrências cujo Status seja FIXED;
+4. preserve as demais ocorrências e seus dados;
+5. não escolha previamente quais vulnerabilidades são relevantes.
+
+A seleção do que seria considerado relevante fazia parte da tarefa atribuída aos modelos.
+
+Registre:
+
+- quantidade de ocorrências antes da remoção;
+- quantidade removida por Status = FIXED;
+- quantidade restante;
+- distribuição por Severity após a remoção;
+- distribuição por Status após a remoção.
+
+Os PDFs podem conter números referentes à execução original.
+
+Não trate esses números como valores que a nova execução precisa necessariamente reproduzir.
+
+Se houver diferenças, registre-as sem tentar alterar os dados atuais para fazê-los coincidir.
+
+============================================================
+5. CONDIÇÃO ORIGINAL DO TESTE 03
+============================================================
+
+No Teste 03, os dados restantes foram divididos em partes e cada parte foi enviada separadamente ao modelo.
+
+O prompt utilizado nos modelos foi:
+
+"Você é um assistente de análise de segurança. Analise somente os dados abaixo.
+
+Imagem: {image} (Parte {index} de {len(chunks)})
+
+{chunk_json}
+
+Produza uma análise direta em português contendo:
+- Vulnerabilidades relevantes (ID e Pacote).
+- Impacto provável.
+- Recomendações de correção práticas.
+Seja conciso e direto ao ponto."
+
+Cada parte foi processada de forma independente.
+
+As respostas das partes foram posteriormente reunidas no relatório final.
+
+Considere essa característica ao analisar os PDFs.
+
+Não presuma que o modelo possuía acesso simultâneo às outras partes durante a geração de uma determinada resposta.
+
+============================================================
+6. ETAPA 3 — CRIAR UMA ANÁLISE DE CONTROLE
+============================================================
+
+Antes de avaliar qualquer um dos três modelos, crie uma análise de controle a partir dos dados do Trivy após a remoção dos registros FIXED.
+
+Importante:
+
+FAÇA A ANÁLISE DE CONTROLE ANTES DE LER E AVALIAR O CONTEÚDO DOS TRÊS PDFs.
+
+Isso evita que as respostas dos modelos influenciem a construção da referência.
+
+A análise de controle deverá responder à mesma solicitação feita aos modelos:
+
+1. Vulnerabilidades relevantes — ID e pacote;
+2. Impacto provável;
+3. Recomendações de correção práticas.
+
+Use somente as informações existentes no resultado do Trivy.
+
+Para cada conclusão, utilize os campos disponíveis no relatório, como:
+
+- VulnerabilityID;
+- PkgName;
+- InstalledVersion;
+- FixedVersion;
+- Status;
+- Severity;
+- Title;
+- Description;
+- demais campos presentes quando relevantes.
+
+Não adicione informações obtidas fora do relatório.
+
+Se determinada conclusão não puder ser sustentada pelos dados disponíveis, não a trate como fato.
+
+Salve em:
+
+D:\Documentos(D)\Estudos\FATEC\TCC\docx\analise-3\ANALISE_CONTROLE_TESTE03.md
+
+============================================================
+7. DIFERENÇA TEMPORAL DO TRIVY
+============================================================
+
+O relatório obtido agora pode não ser idêntico ao relatório utilizado quando os PDFs foram produzidos, porque os dados utilizados pelo Trivy podem ter sido atualizados entre as execuções.
+
+Portanto:
+
+- não considere automaticamente uma diferença entre o novo JSON e os PDFs como erro do modelo;
+- primeiro determine se existe evidência suficiente de que aquele dado também estava presente na execução original;
+- quando isso não puder ser estabelecido, marque a comparação como inconclusiva naquele ponto.
+
+Não force correspondência entre execuções realizadas em momentos diferentes.
+
+============================================================
+8. ETAPA 4 — LEITURA DOS TRÊS RELATÓRIOS
+============================================================
+
+Depois de concluir e salvar a análise de controle, leia integralmente:
+
+D:\Documentos(D)\Estudos\FATEC\TCC\docx\analise-3\TESTE03 - Granite4.2.pdf
+
+D:\Documentos(D)\Estudos\FATEC\TCC\docx\analise-3\TESTE03 - Deepseek-r1.pdf
+
+D:\Documentos(D)\Estudos\FATEC\TCC\docx\analise-3\TESTE03 - Qwen3.5.pdf
+
+Avalie cada relatório de forma independente antes de compará-los entre si.
+
+Não aumente ou reduza a nota de um modelo apenas porque outro apresentou desempenho melhor ou pior.
+
+As notas devem decorrer dos critérios definidos abaixo.
+
+============================================================
+9. CRITÉRIOS DE AVALIAÇÃO
+============================================================
+
+Utilize exatamente os três elementos solicitados no Teste 03:
+
+1. Vulnerabilidades relevantes
+2. Impacto provável
+3. Recomendações de correção práticas
+
+Cada critério receberá nota de 0 a 10.
+
+Os três critérios possuem peso igual.
+
+============================================================
+10. VULNERABILIDADES RELEVANTES
+============================================================
+
+Avalie a qualidade da identificação e apresentação das vulnerabilidades.
+
+Considere:
+
+- correspondência dos IDs com os dados disponíveis;
+- associação entre vulnerabilidade e pacote;
+- cobertura;
+- precisão;
+- tratamento de ocorrências repetidas;
+- utilização adequada das informações de severidade, status e versões;
+- omissões ou adições relevantes.
+
+Pergunta de avaliação:
+
+> A resposta representa adequadamente as vulnerabilidades contidas nos dados apresentados ao modelo?
+
+Nota: 0 a 10.
+
+============================================================
+11. IMPACTO PROVÁVEL
+============================================================
+
+Avalie a qualidade da interpretação do impacto.
+
+Considere:
+
+- relação com os dados apresentados;
+- coerência técnica;
+- precisão;
+- distinção entre informação fornecida e inferência;
+- proporcionalidade das conclusões;
+- qualidade da explicação.
+
+Pergunta de avaliação:
+
+> O impacto apresentado é coerente e suficientemente sustentado pelos dados disponíveis ao modelo?
+
+Nota: 0 a 10.
+
+============================================================
+12. RECOMENDAÇÕES DE CORREÇÃO
+============================================================
+
+Avalie:
+
+- relação entre a recomendação e o achado;
+- uso adequado das informações de versão disponíveis;
+- aplicabilidade;
+- precisão;
+- cautela diante de informações ausentes;
+- utilidade da recomendação.
+
+Pergunta de avaliação:
+
+> As recomendações são coerentes, úteis e sustentadas pelas informações disponíveis ao modelo?
+
+Nota: 0 a 10.
+
+============================================================
+13. CLASSIFICAÇÃO DAS DIVERGÊNCIAS
+============================================================
+
+Quando encontrar uma diferença relevante, classifique-a de forma neutra como:
+
+- SUSTENTADA PELOS DADOS;
+- PARCIALMENTE SUSTENTADA;
+- NÃO SUSTENTADA PELOS DADOS;
+- CONTRADITÓRIA AOS DADOS;
+- INCONCLUSIVA POR DIFERENÇA ENTRE EXECUÇÕES.
+
+Não presuma intenção do modelo.
+
+Não utilize termos como "alucinação" automaticamente.
+
+Use esse termo somente na síntese se houver informação apresentada como fato sem suporte nos dados disponíveis e se a classificação for justificável.
+
+============================================================
+14. ESCALA
+============================================================
+
+10 — desempenho excelente no critério
+9 — desempenho muito bom
+8 — desempenho bom
+7 — desempenho satisfatório
+6 — desempenho razoável
+5 — atendimento parcial
+4 — desempenho abaixo do esperado
+3 — desempenho fraco
+2 — desempenho muito fraco
+1 — atendimento mínimo
+0 — critério não atendido
+
+Considere satisfatório:
+
+média final >= 7,00
+
+============================================================
+15. MÉDIA FINAL
+============================================================
+
+Calcule:
+
+Média final =
+(Vulnerabilidades relevantes + Impacto provável + Recomendações de correção) / 3
+
+Não utilize pesos diferentes.
+
+============================================================
+16. AVALIAÇÃO INDIVIDUAL
+============================================================
+
+Avalie cada modelo separadamente.
+
+Para cada modelo utilize:
+
+# [Nome do modelo]
+
+| Critério | Nota |
+|---|---:|
+| Vulnerabilidades relevantes | X/10 |
+| Impacto provável | X/10 |
+| Recomendações de correção | X/10 |
+| MÉDIA FINAL | X/10 |
+
+## Justificativa das notas
+
+Explique objetivamente a razão de cada nota.
+
+## Principais acertos
+
+## Principais limitações
+
+## Divergências observadas
+
+Para divergências relevantes, informe:
+
+- parte do relatório;
+- conteúdo apresentado pelo modelo;
+- dado utilizado como referência;
+- classificação da divergência.
+
+## Omissões relevantes
+
+## Informações adicionais apresentadas pelo modelo
+
+Registre informações adicionais sem assumir automaticamente que são corretas ou incorretas.
+
+Classifique-as conforme a evidência disponível.
+
+## Síntese
+
+## Resultado
+
+SATISFATÓRIO
+
+ou
+
+NÃO SATISFATÓRIO
+
+Repita exatamente a mesma estrutura para:
+
+- Granite 4.2;
+- DeepSeek R1;
+- Qwen 3.5.
+
+============================================================
+17. COMPARAÇÃO CONSOLIDADA
+============================================================
+
+Depois das três avaliações individuais, produza:
+
+| Critério | Granite 4.2 | DeepSeek R1 | Qwen 3.5 |
+|---|---:|---:|---:|
+| Vulnerabilidades relevantes | | | |
+| Impacto provável | | | |
+| Recomendações de correção | | | |
+| MÉDIA FINAL | | | |
+
+============================================================
+18. COMPARAÇÃO POR CRITÉRIO
+============================================================
+
+Compare os três modelos em:
+
+### Vulnerabilidades relevantes
+
+Explique diferenças de cobertura, precisão e representação dos dados.
+
+### Impacto provável
+
+Explique diferenças de interpretação e sustentação das conclusões.
+
+### Recomendações de correção
+
+Explique diferenças de precisão, aplicabilidade e sustentação.
+
+Não altere notas durante esta comparação.
+
+A comparação consolidada deve apenas explicar as notas atribuídas anteriormente.
+
+============================================================
+19. EFEITO DA DIVISÃO EM PARTES
+============================================================
+
+Analise separadamente o comportamento decorrente da estrutura do Teste 03.
+
+Com base somente nos PDFs, observe se houve:
+
+- repetição entre partes;
+- inconsistências entre partes;
+- diferenças na forma de tratar achados semelhantes;
+- variação nas recomendações;
+- perda de visão global;
+- vantagens observáveis da divisão.
+
+Não atribua automaticamente qualquer problema à divisão em partes.
+
+Apenas registre efeitos para os quais exista evidência nos relatórios.
+
+============================================================
+20. OBJETIVIDADE DA RESPOSTA
+============================================================
+
+O prompt original solicitou que a resposta fosse concisa e direta.
+
+Não crie um quarto critério nem uma nota específica para concisão.
+
+Considere esse aspecto qualitativamente dentro dos três critérios quando afetar:
+
+- clareza;
+- cobertura;
+- precisão;
+- utilidade.
+
+============================================================
+21. RESULTADO GERAL
+============================================================
+
+Apresente:
+
+1º — [modelo] — [média]
+2º — [modelo] — [média]
+3º — [modelo] — [média]
+
+Depois responda:
+
+> Qual modelo apresentou maior aderência aos dados disponíveis nesta rodada?
+
+E:
+
+> O desempenho de cada modelo foi satisfatório segundo os critérios definidos?
+
+Responda separadamente para:
+
+- Granite 4.2;
+- DeepSeek R1;
+- Qwen 3.5.
+
+============================================================
+22. CONCLUSÃO
+============================================================
+
+Produza uma conclusão acadêmica adequada ao TCC.
+
+A conclusão deve:
+
+- sintetizar os resultados desta rodada;
+- apontar as diferenças observadas;
+- reconhecer as limitações da comparação;
+- permanecer restrita ao Teste 03.
+
+Não generalize os resultados para outros modelos, imagens ou configurações.
+
+============================================================
+23. RASTREABILIDADE
+============================================================
+
+Registre:
+
+- diretório utilizado;
+- imagem analisada;
+- comando do Trivy;
+- versão do Trivy;
+- data/hora da nova coleta;
+- arquivo JSON utilizado;
+- quantidade total de ocorrências;
+- quantidade removida por Status = FIXED;
+- quantidade restante;
+- distribuição por severidade dos dados restantes;
+- TESTE03 - Granite4.2.pdf;
+- TESTE03 - Deepseek-r1.pdf;
+- TESTE03 - Qwen3.5.pdf;
+- três critérios;
+- escala utilizada;
+- pesos iguais;
+- fórmula da média final;
+- confirmação de que nenhuma fonte externa foi utilizada.
+
+============================================================
+24. ARQUIVOS DE SAÍDA
+============================================================
+
+Salve em:
+
+D:\Documentos(D)\Estudos\FATEC\TCC\docx\analise-3
+
+os seguintes arquivos:
+
+TRIVY_FIWARE_ORION_TESTE03.json
+
+ANALISE_CONTROLE_TESTE03.md
+
+RESULTADO_COMPARACAO_TESTE03.md
+
+RESULTADO_COMPARACAO_TESTE03.pdf
+
+PROMPT_COMPARACAO_TESTE03.txt
+
+PROMPT_COMPARACAO_TESTE03.txt deverá conter uma cópia integral deste prompt.
+
+============================================================
+25. ORDEM OBRIGATÓRIA
+============================================================
+
+Execute nesta ordem:
+
+1. obter o relatório completo do Trivy;
+2. registrar os dados brutos;
+3. remover somente as ocorrências com Status = FIXED;
+4. registrar os dados restantes;
+5. criar e salvar a análise de controle sem consultar os PDFs;
+6. somente então ler os três PDFs;
+7. avaliar cada modelo individualmente;
+8. produzir a comparação consolidada;
+9. elaborar a conclusão;
+10. salvar os arquivos finais.
+
+Não consulte fontes externas.
+Não altere os três PDFs.
+Não altere os dados do Trivy.
+Não modifique notas depois de iniciar a comparação entre os modelos.

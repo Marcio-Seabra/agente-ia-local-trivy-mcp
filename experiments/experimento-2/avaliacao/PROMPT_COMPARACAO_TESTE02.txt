@@ -1,0 +1,271 @@
+Você realizará a segunda rodada de testes comparativos do TCC.
+Utilize como diretório de trabalho:
+`D:\Documentos(D)\Estudos\FATEC\TCC\docx\Analise-2`
+Todos os arquivos gerados durante este teste deverão ser salvos nesse diretório.
+Nesse diretório estarão os três relatórios das IAs locais, em formato PDF:
+
+* `TESTE02 - Granite4.2.pdf`
+* `TESTE02 - Qwen3.5.pdf`
+* `TESTE02 - Deepseek-r1.pdf`
+
+Os três modelos receberam a mesma solicitação:
+"Forneça uma análise de segurança contendo:
+
+1. Resumo da análise
+2. Vulnerabilidades encontradas
+3. Níveis de severidade
+4. Principais riscos
+5. Recomendações de correção
+
+Responda em português."
+A análise foi realizada sobre as vulnerabilidades de severidade HIGH e CRITICAL encontradas pelo Trivy na imagem Docker:
+`fiware/orion`
+O objetivo desta etapa é criar uma análise de controle e, posteriormente, comparar com ela os três relatórios produzidos pelas IAs locais.
+============================================================
+ETAPA 1 — OBTENÇÃO DOS DADOS DO TRIVY
+Utilize o Trivy para analisar a imagem Docker:
+`fiware/orion`
+Considere apenas vulnerabilidades de severidade:
+
+* HIGH
+* CRITICAL
+
+Utilize o seguinte comando como referência:
+`.\trivy.exe image --severity HIGH,CRITICAL -f json fiware/orion`
+Você pode executar os comandos e utilizar as ferramentas necessárias para obter as informações da imagem.
+Salve o resultado JSON da análise no diretório:
+`D:\Documentos(D)\Estudos\FATEC\TCC\docx\Analise-2`
+com o nome:
+`TRIVY_FIWARE_ORION_HIGH_CRITICAL.json`
+Se esse arquivo já existir e corresponder à análise necessária, ele poderá ser utilizado.
+============================================================
+ETAPA 2 — CRIAÇÃO DA ANÁLISE DE CONTROLE
+A partir do resultado obtido diretamente pelo Trivy, produza uma análise respondendo à mesma solicitação utilizada com os três modelos locais:
+"Forneça uma análise de segurança contendo:
+
+1. Resumo da análise
+2. Vulnerabilidades encontradas
+3. Níveis de severidade
+4. Principais riscos
+5. Recomendações de correção
+
+Responda em português."
+A análise deverá considerar somente as vulnerabilidades HIGH e CRITICAL presentes no resultado do Trivy.
+Organize a resposta nas seguintes seções:
+1. Resumo da análise
+2. Vulnerabilidades encontradas
+3. Níveis de severidade
+4. Principais riscos
+5. Recomendações de correção
+Produza uma análise completa e tecnicamente fundamentada nos dados obtidos.
+Salve essa análise integralmente em:
+`D:\Documentos(D)\Estudos\FATEC\TCC\docx\Analise-2\analise-controle.md`
+Essa será a análise de controle utilizada na comparação.
+============================================================
+ETAPA 3 — LEITURA DOS RELATÓRIOS DAS IAS LOCAIS
+Após criar `analise-controle.md`, leia integralmente os seguintes arquivos:
+Granite 4.2:
+`D:\Documentos(D)\Estudos\FATEC\TCC\docx\Analise-2\TESTE02 - Granite4.2.pdf`
+Qwen 3.5:
+`D:\Documentos(D)\Estudos\FATEC\TCC\docx\Analise-2\TESTE02 - Qwen3.5.pdf`
+DeepSeek R1:
+`D:\Documentos(D)\Estudos\FATEC\TCC\docx\Analise-2\TESTE02 - Deepseek-r1.pdf`
+Utilize integralmente o conteúdo desses três PDFs na avaliação.
+============================================================
+OBJETIVO DA COMPARAÇÃO
+Avalie comparativamente a qualidade das três respostas tomando `analise-controle.md` como referência.
+As três respostas foram produzidas para a mesma solicitação e devem ser avaliadas utilizando exatamente os mesmos critérios, escala e pesos.
+A estrutura da avaliação será formada pelos cinco elementos da solicitação original:
+
+1. Resumo da análise
+2. Vulnerabilidades encontradas
+3. Níveis de severidade
+4. Principais riscos
+5. Recomendações de correção
+
+Cada dimensão receberá uma nota de 0 a 10.
+Para determinar a nota de cada dimensão, considere conjuntamente:
+
+* correção em relação à análise de controle;
+* cobertura das informações relevantes;
+* coerência técnica;
+* qualidade da explicação.
+
+Os quatro aspectos servem para orientar a análise da dimensão.
+Cada dimensão receberá uma única nota de 0 a 10.
+Os cinco critérios possuem o mesmo peso.
+A nota final será calculada por:
+`(Resumo + Vulnerabilidades + Severidade + Riscos + Recomendações) / 5`
+============================================================
+ESCALA
+Utilize a seguinte escala para as três respostas:
+10 — desempenho excelente no critério
+9 — desempenho muito bom
+8 — desempenho bom
+7 — desempenho satisfatório
+6 — desempenho razoável
+5 — atendimento parcial
+4 — desempenho abaixo do esperado
+3 — desempenho fraco
+2 — desempenho muito fraco
+1 — atendimento mínimo
+0 — critério não atendido
+As notas devem ser fundamentadas no conteúdo dos arquivos analisados.
+============================================================
+
+1. RESUMO DA ANÁLISE
+============================================================
+
+Compare o resumo apresentado em cada resposta com a análise de controle.
+Avalie:
+
+* representação geral dos resultados;
+* informações selecionadas para sintetizar o cenário;
+* correspondência com a referência;
+* qualidade da síntese.
+
+Atribua uma nota de 0 a 10 e apresente a justificativa.
+============================================================
+2. VULNERABILIDADES ENCONTRADAS
+Compare as vulnerabilidades apresentadas em cada resposta com a análise de controle.
+Avalie:
+
+* identificação das vulnerabilidades;
+* informações associadas a elas;
+* correspondência com a referência;
+* cobertura;
+* precisão das informações apresentadas.
+
+Atribua uma nota de 0 a 10 e apresente a justificativa.
+============================================================
+3. NÍVEIS DE SEVERIDADE
+Compare a apresentação e interpretação das severidades com a análise de controle.
+Avalie:
+
+* classificações apresentadas;
+* associação entre vulnerabilidade e severidade;
+* correspondência com a referência;
+* qualidade da interpretação.
+
+Atribua uma nota de 0 a 10 e apresente a justificativa.
+============================================================
+4. PRINCIPAIS RISCOS
+Compare os riscos identificados nas respostas com os riscos apresentados ou sustentados pela análise de controle.
+Avalie:
+
+* relação entre os achados e os riscos descritos;
+* coerência da interpretação;
+* cobertura dos riscos relevantes;
+* qualidade da explicação.
+
+Atribua uma nota de 0 a 10 e apresente a justificativa.
+============================================================
+5. RECOMENDAÇÕES DE CORREÇÃO
+Compare as recomendações apresentadas com a análise de controle.
+Avalie:
+
+* relação das recomendações com os achados;
+* correção das ações sugeridas;
+* cobertura das medidas relevantes;
+* qualidade e utilidade das recomendações.
+
+Atribua uma nota de 0 a 10 e apresente a justificativa.
+============================================================
+AVALIAÇÃO INDIVIDUAL
+Avalie primeiro cada resposta separadamente.
+Para cada modelo utilize:
+[Nome do modelo]
+CritérioNotaJustificativaResumo da análiseX/10Vulnerabilidades encontradasX/10Níveis de severidadeX/10Principais riscosX/10Recomendações de correçãoX/10MÉDIA FINALX/10
+Depois da tabela apresente:
+Principais acertos
+Identifique os aspectos da resposta que apresentaram maior correspondência ou qualidade em relação ao controle.
+Principais limitações
+Identifique os aspectos em que a resposta apresentou menor correspondência ou qualidade.
+Divergências em relação ao controle
+Liste objetivamente as diferenças encontradas entre a resposta e `analise-controle.md`.
+Síntese da avaliação
+Faça uma síntese curta do desempenho observado.
+Resultado
+Informe se, de acordo com a escala utilizada e a média obtida, o desempenho geral da resposta foi:
+
+* SATISFATÓRIO; ou
+* NÃO SATISFATÓRIO.
+
+Considere como satisfatório resultado com média final igual ou superior a 7,00.
+Repita exatamente essa estrutura para:
+
+* Granite 4.2
+* DeepSeek R1
+* Qwen 3.5
+
+============================================================
+COMPARAÇÃO CONSOLIDADA
+Após concluir as três avaliações individuais, apresente:
+CritérioGranite 4.2DeepSeek R1Qwen 3.5Resumo da análiseVulnerabilidades encontradasNíveis de severidadePrincipais riscosRecomendações de correçãoMÉDIA FINAL
+============================================================
+COMPARAÇÃO POR CRITÉRIO
+Faça uma comparação textual separada para:
+Resumo da análise
+Compare as três respostas e explique as diferenças observadas.
+Vulnerabilidades encontradas
+Compare as três respostas e explique as diferenças observadas.
+Níveis de severidade
+Compare as três respostas e explique as diferenças observadas.
+Principais riscos
+Compare as três respostas e explique as diferenças observadas.
+Recomendações de correção
+Compare as três respostas e explique as diferenças observadas.
+============================================================
+RESULTADO GERAL
+Apresente a ordenação final obtida pelas médias:
+1º —
+2º —
+3º —
+Informe a média de cada resposta.
+Explique a diferença entre os resultados relacionando-a aos cinco critérios avaliados.
+Em seguida, responda à questão desta rodada:
+As análises produzidas pelos modelos locais foram satisfatórias quando comparadas à análise de controle?
+Responda individualmente para:
+
+* Granite 4.2;
+* DeepSeek R1;
+* Qwen 3.5.
+
+Finalize com uma síntese comparativa dos três resultados.
+============================================================
+CONCLUSÃO
+Produza uma conclusão adequada para utilização acadêmica no TCC.
+A conclusão deverá sintetizar os resultados observados nesta rodada de testes e permanecer limitada aos dados analisados neste experimento.
+============================================================
+RASTREABILIDADE
+Ao final registre:
+
+* imagem analisada;
+* comando do Trivy utilizado;
+* arquivo JSON utilizado;
+* arquivo da análise de controle;
+* `TESTE02 - Granite4.2.pdf`;
+* `TESTE02 - Deepseek-r1.pdf`;
+* `TESTE02 - Qwen3.5.pdf`;
+* cinco critérios utilizados;
+* escala de 0 a 10;
+* peso igual entre os critérios;
+* fórmula utilizada para a média final.
+
+A fórmula é:
+`Média final = (Resumo + Vulnerabilidades + Severidade + Riscos + Recomendações) / 5`
+============================================================
+ARQUIVOS DE SAÍDA
+Mantenha todos os arquivos relacionados a este teste em:
+`D:\Documentos(D)\Estudos\FATEC\TCC\docx\Analise-2`
+Salve:
+Análise do Trivy:
+`TRIVY_FIWARE_ORION_HIGH_CRITICAL.json`
+Análise de controle:
+`analise-controle.md`
+Uma cópia integral deste prompt:
+`PROMPT_COMPARACAO_TESTE02.txt`
+Resultado completo da avaliação:
+`RESULTADO_COMPARACAO_TESTE02.md`
+Versão final da avaliação em PDF:
+`RESULTADO_COMPARACAO_TESTE02.pdf`
