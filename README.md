@@ -175,6 +175,10 @@ Os termos completos estão no arquivo [`LICENSE`](LICENSE).
 
 ## Como citar
 
-Cite a monografia: SOUZA, Danilo da Silva; JORDÃO, Gabriel Fernandes; BASTOS NETO, Marcio Seabra; OLIVEIRA, Thiago Alves de. **Agente de Inteligência Artificial Local para Interpretação de Vulnerabilidades em Contêineres Docker com Trivy e Protocolo MCP**. 2026. Trabalho de Conclusão de Curso (Tecnologia em Segurança da Informação) – Faculdade de Tecnologia de São Caetano do Sul – Antônio Russo, São Caetano do Sul, 2026. Orientador: Prof. Dr. Fábio Henrique Cabrini.
+Enquanto a versão final da monografia não estiver oficialmente aprovada e publicada, este repositório pode ser citado como projeto acadêmico:
 
-Os mesmos dados estão em formato legível por máquina no arquivo [`CITATION.cff`](CITATION.cff).
+SOUZA, Danilo da Silva; JORDÃO, Gabriel Fernandes; BASTOS NETO, Marcio Seabra; OLIVEIRA, Thiago Alves de. **Agente de Inteligência Artificial Local para Interpretação de Vulnerabilidades em Contêineres Docker com Trivy e Protocolo MCP**. São Caetano do Sul, 2026. Projeto de Trabalho de Conclusão de Curso – Faculdade de Tecnologia de São Caetano do Sul – Antônio Russo, curso de Tecnologia em Segurança da Informação. Orientador: Prof. Dr. Fábio Henrique Cabrini.
+
+Após a aprovação e publicação oficial da monografia, esta seção poderá ser atualizada com a referência bibliográfica definitiva.
+
+Os metadados de citação do projeto também estão disponíveis em formato legível por máquina no arquivo [`CITATION.cff`](CITATION.cff).
